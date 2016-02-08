@@ -1,19 +1,18 @@
 #include <stdio.h>
+#include <string.h>
 
 int main (int argc, char *argv[]) {
     int i=0;
-    char password[32];
 
     if (argc < 2){
         printf("Error, please type the password key \n");
+        return 0;
     }
 
-    strcpy(password, argv[1]);
-
-    if (ret == 0) { 
+    if (strcmp(argv[1], "my-secret-key") == 0) { 
         printf("Congratulations \n");
     } else {
-        printf(" \n");
+        printf("Try again \n");
     }
 
     return 0;
